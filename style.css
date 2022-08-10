@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;700&family=Roboto:wght@100;300;400;500;700;900&family=Source+Sans+Pro:wght@200;300;400;600;700;900&display=swap');
+
+/*-------------------------ALL-------------------------*/
+:root {
+    --primary-purple: #8922ED;
+    --secondary-purple: #A143FA;
+
+    --tertiary-purple: #E2C9F6;
+    --lighter-purple: #F8D1FF;
+    --title: #64249f;
+    --text: #F4FDF8;
+    --darker-text: #5a2190;
+}
+
+* {
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(203, 145, 226, 0.144);
+}
+
+.wrapper {
+    width: 90%;
+    height: 80%;
+    
+    display: flex;
+    flex-direction: column;
+    
+    background: white;
+    box-shadow: 0px 40px 47px -27px rgba(66,17,114,0.36);    margin: auto;
+
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+button {
+    cursor: pointer;
+}
+
+/*-------------------------HEADER-------------------------*/
+.header {
+    min-height: 70px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    margin: auto 1.7rem;
+}
+
+.header span {
+    font-weight: 900;
+    font-size: 2rem;
+    color: var(--darker-text);
+    word-break: break-word;
+}
+
+#new {
+    background: var(--primary-purple);
+    
+    font-size: 1rem;
+    color: white;
+    
+    padding: 8px;
+    
+    border-radius: 5px;
+    border: none;
+}
+
+.header-info {
+    width: auto;
+    height: inherit;
+    overflow: auto;
+
+    margin: 1rem;
+
+    padding: 1rem;
+}
+
+.header-info::-webkit-scrollbar {
+    width: 12px;
+    background-color: transparent;
+}
+
+.header-info::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: var(--tertiary-color);
+}
+
+/*-------------------------TABEL(REGISTERED-WORKERS)-------------------------*/
+table {
+    width: 100%;
+
+    word-break: break-word;
+
+    border-spacing: 10px;
+    border-collapse: collapse;
+}
+
+thead {
+    border-radius: 10rem;
+    background-color: var(--tertiary-purple);
+}
+
+tr {
+    border-bottom: 1px solid #cbbadb !important;
+}
+
+
+thead tr th {
+    color: var(--title);
+    text-align: start;
+    
+    padding: 5px;
+    margin-bottom: 50px;
+}
+
+
+thead tr th.acao {
+    width: 100px !important;
+    text-align: center;
+}
+
+tbody tr td {
+    max-width: 50px;
+
+    vertical-align: text-top;
+    padding: 6px;
+}
+
+tbody tr {
+    margin-bottom: 50px;
+}
+
+tbody tr td.acao {
+    text-align: center;
+}
+
+tbody button{
+    color: var(--primary-purple);
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/*-------------------------MODAL-------------------------*/
+.modal-wrapper {
+    width: 100vw;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+    width: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: white;
+
+    padding: 40px;
+
+    border-radius: 10px;
+}
+
+.modal label {
+    width: 100%;
+
+    font-size: 0.9rem;
+    font-weight: 300;
+}
+
+.modal input {
+    width: 100%;
+    outline: none;
+    
+    margin-bottom: 20px;
+    
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 0.12rem solid #cbbadb;
+    
+    padding: 6px 10px;
+}
+
+.modal button {
+    width: 100%;
+
+    color: white;
+    outline: none;
+    padding: 5px 10px;
+    
+    background-color: var(--primary-purple);
+    border-radius: 20px;
+    border: none;
+    
+    margin: 10px auto;
+}
+
+.active {
+    display: flex;
+}
+
+.active .modal {
+    animation: modal .4s;
+}
+
+@keyframes modal {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/*-------------------------RESPONSIVE-------------------------*/
+@media (max-width: 700px) {
+    body {
+        font-size: 0.5rem;
+    }
+
+    .header span {
+        font-size: 0.9rem;
+    }
+
+    #new {
+        padding: 0.5rem;
+        font-size: 0.5rem;
+    }
+
+    thead tr th.acao {
+        width: auto !important;
+    }
+
+    td button i {
+        font-size: 1.2rem !important;
+    }
+
+    td button i:first-child {
+        margin-right: 0;
+    }
+
+    .modal {
+        width: 90% !important;
+    }
+
+    .modal label {
+        font-size: 0.7rem !important;
+    }
+}
