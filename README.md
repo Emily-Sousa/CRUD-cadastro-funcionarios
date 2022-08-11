@@ -1,7 +1,7 @@
 # <p align="center">Cadastro de Funcionários</p>
 
 <div align="center">
- <img src="http://img.shields.io/static/v1?label=RELEASE&message=JULY%2022&color=green&style=for-the-badge"/>
+ <img src="http://img.shields.io/static/v1?label=RELEASE&message=AUGUST%2022&color=green&style=for-the-badge"/>
 <img src="https://img.shields.io/static/v1?label=STATUS&message=FINISH&color=green&style=for-the-badge"/>
 </div>
 
